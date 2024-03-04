@@ -104,7 +104,7 @@ main{
 }
 
 article{
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     margin-top: 1rem;
     align-self: stretch;
 }
@@ -147,19 +147,22 @@ article{
 }
 
 .item-name-container > img{
-    max-width: 50%;
+    max-width: 60%;
     margin-bottom: 3rem;
+}
+
+.item-name-container form{
+    width: 60%;
 }
 
 .item-name-container button{
     margin-top: 3rem;
     padding: 1rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
     background-color: black;
     color: white;
     border: none;
     border-radius: 5px;
+    width: 100%;
 }
 
 .item-name-container button:hover{
@@ -208,7 +211,6 @@ article{
 }
 
 .ending-article{
-    font-size: 1.6rem;
     margin-top: 3rem;
 }
 
@@ -219,6 +221,12 @@ footer{
     padding: 2rem;
     justify-content: space-around;
     align-items: center;
+}
+
+.footer-logo{
+    max-height: 4.5rem;
+    width: auto;
+    border-radius: 5px;
 }
 
 .footer-header{
@@ -350,7 +358,11 @@ footer{
 
     .item-name-container > img{
         margin: 0;
-        width: 40%;
+        max-width: 50%;
+    }
+
+    .item-name-container form{
+        width: 50%;
     }
 
     .item-name-container button{
@@ -364,6 +376,13 @@ footer{
     footer{
         flex-direction: column;
         gap: 1.5rem;
+    }
+}
+
+/* Small Tablet Styles*/
+@media (min-width: 600px) and (max-width: 700px){
+    .related-articles{
+        display: none;
     }
 }
 
@@ -382,9 +401,56 @@ footer{
         font-size: 5rem;
     }
 
+    .header-title{
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .item-name-container img{
+        max-width: 65%;
+    }
+
+    .item-name-container form{
+        width: 65%;
+    }
+
+    footer{
+        font-size: 1.4rem;
+    }
 }
 
 /* Big Desktop Styles*/
-@media (min-width: 1600px){
+@media (min-width: 1425px){
+    main{
+        margin-left: 30rem;
+        margin-right: 30rem;
+    }
 
+    .item-name-container img{
+        width: 50%;
+    }
+
+    .item-name-container form{
+        width: 50%;
+    }
+
+    .item-name-container img{
+        margin-bottom: 0;
+    }
+}
+
+/* Mega Desktop Styles*/
+@media (min-width: 1810px){
+    main{
+        margin-left: 40rem;
+        margin-right: 40rem;
+    }
+}
+
+/* MEGA Desktop Styles*/
+@media (min-width: 2100px){
+    main{
+        margin-left: 55rem;
+        margin-right: 55rem;
+    }
 }
