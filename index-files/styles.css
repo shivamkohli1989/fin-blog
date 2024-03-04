@@ -1,0 +1,353 @@
+/* Desktop Styles*/
+:root{
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    color: black;
+    font-size: 62.5%;
+}
+  
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(235, 235, 235);
+}
+
+header{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    box-shadow: 1px 1px 1px rgb(175, 175, 175);
+}
+
+.toggle-button-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+.header-title{
+    margin: 1rem;
+    margin-left: 3rem;
+}
+
+.header-title img{
+    max-height: 4.5rem;
+    width: auto;
+    border-radius: 5px;
+}
+
+.navbar-links{
+    display: flex;
+    margin-right: 3rem;
+    background-color: white;
+}
+
+
+.navbar-links li{
+    list-style: none;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.navbar-links li a{
+    text-decoration: none;
+    color: black;
+    padding: 1.25rem;
+    display: block;
+}
+
+.navbar-links li:hover{
+    background-color: rgb(210, 210, 210);
+    border-radius: 10px;
+}
+
+.header-toggle-button{
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32px;
+    height: 23px;
+    margin-right: 3.5rem;
+}
+
+.header-toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 10rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.title{
+    font-size: 6rem;
+    margin-top: 5rem;
+}
+
+.slogan{
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    font-weight: normal;
+}
+
+.sections-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 3rem;
+    margin-bottom: 5rem;
+}
+
+.section-container{
+    font-size: 2.5rem;
+    font-weight: bold;
+    box-shadow: 2px 2px 2px 2px rgb(175, 175, 175);
+    border: 1px solid black;
+    padding: 5rem;
+    max-width: 10rem;
+    max-height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+}
+
+.section-container:hover{
+    cursor: pointer;
+}
+
+.section-container img{
+    max-width: 10rem;
+}
+
+.heading{
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+footer{
+    background-color: white;
+    display: flex;
+    font-size: 1.6rem;
+    padding: 2rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-logo{
+    max-height: 4.5rem;
+    width: auto;
+    border-radius: 5px;
+}
+
+.footer-header{
+    padding-bottom: 0.25rem;
+    border-bottom: 1.5px solid black;
+}
+
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-container a{
+    text-decoration: none;
+    color: black;
+}
+
+/* Mobile Styles*/
+@media (max-width: 500px){
+    header{
+        background-color: transparent;
+    }
+
+    .header-toggle-button{
+        display: flex;
+        margin-right: 2rem;
+    }
+    
+    .navbar-links{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 6.25rem;
+        position: absolute;
+        margin-right: 0;
+    }
+
+    .navbar-links li{
+        width: 95%;
+        font-size: 1.9rem;
+        margin-left: 1rem;
+    }
+
+    .navbar-links li a{
+        padding: 1.75rem;
+        padding-left: 1rem;
+    }
+
+    .header-title{
+        margin-left: 1rem;
+    }
+
+    header{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .active{
+        display: flex;
+        padding-bottom: 1vh;
+
+        animation: expand 200ms ease-in-out;
+        transform-origin: top;
+    }
+
+    .active-reverse {
+        display: flex;
+        animation: expand-reverse 200ms ease-in-out;
+        transform-origin: top;
+    }
+
+    @keyframes expand {
+        0% {
+          transform: scaleY(0);
+        }
+        
+        100% {
+          transform: scaleY(1);
+        }
+    }
+
+    @keyframes expand-reverse {
+        0% {
+            transform: scaleY(1);
+        }
+    
+        100% {
+            transform: scaleY(0);
+        }
+    }
+
+    main{
+        margin: 2rem;
+    }
+
+    .title{
+        font-size: 3.25rem;
+        margin-top: 4rem;
+    }
+    
+    .slogan{
+        font-size: 1.6rem;
+        margin-top: 0;
+        margin-bottom: 4rem;
+    }
+
+    .sections-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .section-container{
+        flex-direction: row;
+        max-width: 30rem;
+        gap: 2rem;
+        padding: 1rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .section-container img{
+        max-width: 8rem;
+    }
+
+    footer{
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+
+/* Small Tablet Styles*/
+@media (min-width: 600px) and (max-width: 700px){
+
+}
+
+/* Tablet Styles*/
+@media (min-width: 500px) and (max-width: 1024px){
+    .header-title{
+        font-size: 2.4rem;
+    }
+
+    main{
+        margin: 6rem;
+        margin-top: 5rem;
+    }
+
+    .title{
+        font-size: 5rem;
+    }
+
+    .header-title{
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .sections-container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .section-container{
+        flex-direction: row;
+        max-width: 30rem;
+        gap: 2rem;
+    }
+
+    footer{
+        font-size: 1.4rem;
+    }
+}
+
+/* Big Desktop Styles*/
+@media (min-width: 1425px){
+    main{
+        margin-left: 30rem;
+        margin-right: 30rem;
+    }
+}
+
+/* Mega Desktop Styles*/
+@media (min-width: 1810px){
+    main{
+        margin-left: 40rem;
+        margin-right: 40rem;
+    }
+}
+
+/* MEGA Desktop Styles*/
+@media (min-width: 2100px){
+    main{
+        margin-left: 55rem;
+        margin-right: 55rem;
+    }
+}
