@@ -2,6 +2,8 @@ const main = (() =>{
 
     const headerToggleButton = document.querySelector(".header-toggle-button");
     const navbarLinks = document.querySelector(".navbar-links");
+    const screenWidth = window.screen.width;
+    const links = navbarLinks.querySelectorAll('a[href^="#"]');
 
     headerToggleButton.addEventListener("click", () =>{
         if (navbarLinks.classList.contains("active")) {
@@ -19,4 +21,15 @@ const main = (() =>{
             navbarLinks.style.display = "flex";
         }
     });
+
+    
+
+    for(let i = 0; i < links.length; i++){
+        links[i].addEventListener("click", function(e) {
+            if(screenWidth < 501){
+                navbarLinks.classList.remove("active");
+                navbarLinks.style.display = "none";
+            }
+        })
+    }
 })();

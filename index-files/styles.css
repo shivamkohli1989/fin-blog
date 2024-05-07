@@ -11,14 +11,14 @@
 }
 
 body{
-    background-color: rgb(235, 235, 235);
+    background-color: white;
 }
 
 header{
     display: flex;
     align-items: center;
     background-color: white;
-    box-shadow: 1px 1px 1px rgb(175, 175, 175);
+    box-shadow: 1px 1px 1px rgb(150, 150, 150);
 }
 
 .toggle-button-container{
@@ -32,6 +32,9 @@ header{
 .header-title{
     margin: 1rem;
     margin-left: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header-title img{
@@ -45,7 +48,6 @@ header{
     margin-right: 3rem;
     background-color: white;
 }
-
 
 .navbar-links li{
     list-style: none;
@@ -85,35 +87,39 @@ main{
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin: 10rem;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+    margin: 14rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
 }
 
 .title{
-    font-size: 6rem;
-    margin-top: 5rem;
+    font-size: 7rem;
+    margin-top: 10rem;
 }
 
 .slogan{
-    font-size: 2rem;
-    margin-top: 2rem;
-    margin-bottom: 5rem;
+    font-size: 2.25rem;
+    margin-top: 1rem;
+    margin-bottom: 9rem;
     font-weight: normal;
 }
 
 .sections-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 3rem;
+    display: flex;
+    align-self: stretch;
+    justify-content: space-between;
     margin-bottom: 5rem;
+    flex-wrap: wrap;
+}
+
+#articles{
+    margin-top: 2rem;
 }
 
 .section-container{
     font-size: 2.5rem;
     font-weight: bold;
-    box-shadow: 2px 2px 2px 2px rgb(175, 175, 175);
+    box-shadow: 0px 0px 10px rgb(175, 175, 175);
     border: 1px solid black;
     padding: 5rem;
     max-width: 10rem;
@@ -126,24 +132,131 @@ main{
     background-color: white;
     text-decoration: none;
     color: black;
-}
-
-.section-container:hover{
-    cursor: pointer;
+    flex: 1;
+    border-radius: 5px;
 }
 
 .section-container img{
     max-width: 10rem;
 }
 
+.banner-container{
+    background-color: lightgrey;
+    font-size: 1.8rem;
+    padding: 1rem;
+    padding-left: 15rem;
+    padding-right: 15rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.banner-container img{
+    max-height: 25rem;
+    width: auto;
+    justify-self: center;
+}
+.banner-container div{
+    padding-left: 2rem;
+}
+
+.banner-title{
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+}
+
+.banner-text{
+    margin-bottom: 1rem;
+}
+
 .heading{
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    align-self: stretch;
+    border-bottom: solid black 1.5px;
+    padding-bottom: 0.5rem;
+}
+
+.article-container{
+    font-size: 1.8rem;
+    background-color: white;
+    border: 1px solid black;
+    padding: 0.5rem;
+    box-shadow: 0px 0px 10px rgb(175, 175, 175);
+    align-self: stretch;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+.article-container img{
+    max-width: 6rem;
+    margin-left: 1rem;
+}
+
+article{
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.header-space{
+    margin-top: 2rem;
+}
+
+.banner-container-2{
+    background-color: lightgrey;
+    font-size: 1.8rem;
+    padding: 2rem;
+    padding-left: 15rem;
+    padding-right: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.recommended-container{
+    display: flex;
+    gap: 1rem;
+}
+
+.banner-container-2 h2{
+    grid-column: span 2;
+}
+
+.recommended-article-container{
+    text-decoration: none;
+    color: black;
+    justify-content: flex-end;
+    margin: 0;
+    font-size: 1.8rem;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+    padding-bottom: 2.5rem;
+}
+
+.recommended-article-container img{
+    max-width: 10rem;
 }
 
 footer{
-    background-color: white;
+    background-color: rgb(200, 200, 200);
     display: flex;
     font-size: 1.6rem;
     padding: 2rem;
@@ -174,7 +287,7 @@ footer{
 }
 
 /* Mobile Styles*/
-@media (max-width: 500px){
+@media (max-width: 525px){
     header{
         background-color: transparent;
     }
@@ -205,7 +318,12 @@ footer{
     }
 
     .header-title{
+        margin: 1.25rem;
         margin-left: 1rem;
+    }
+
+    .header-title img{
+        max-width: 20rem;
     }
 
     header{
@@ -216,6 +334,7 @@ footer{
     .active{
         display: flex;
         padding-bottom: 1vh;
+        box-shadow: 1px 1px 1px rgb(150, 150, 150);
 
         animation: expand 200ms ease-in-out;
         transform-origin: top;
@@ -252,33 +371,64 @@ footer{
     }
 
     .title{
-        font-size: 3.25rem;
-        margin-top: 4rem;
+        font-size: 4rem;
+        margin-top: 2rem;
+        text-align: center;
     }
     
     .slogan{
-        font-size: 1.6rem;
-        margin-top: 0;
-        margin-bottom: 4rem;
+        font-size: 1.8rem;
+        margin-top: 0.5rem;
+        margin-bottom: 5rem;
+        text-align: center;
+    }
+
+    .banner-container{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .banner-container img{
+        margin-bottom: 1rem;
+        max-height: 22rem;
     }
 
     .sections-container{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
         gap: 1rem;
     }
 
     .section-container{
+        gap: 0.5rem;
+        padding: 0.75rem;
         flex-direction: row;
-        max-width: 30rem;
-        gap: 2rem;
-        padding: 1rem;
-        padding-left: 3rem;
-        padding-right: 3rem;
+        max-width: none;
+        font-size: 1.6rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
     }
 
     .section-container img{
-        max-width: 8rem;
+        max-width: 5rem;
+    }
+
+    .recommended-container{
+        flex-direction: column;
+    }
+    .banner-container-2{
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .recommended-article-container{
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+        padding-left: 0.25rem;
+        padding-right: 0.75rem;
     }
 
     footer{
@@ -288,39 +438,126 @@ footer{
 }
 
 /* Small Tablet Styles*/
-@media (min-width: 600px) and (max-width: 700px){
+@media (min-width: 525px) and (max-width: 700px){
+    main{
+        margin: 2rem;
+    }
 
+    .title{
+        font-size: 4rem;
+        margin-top: 2rem;
+        text-align: center;
+    }
+    
+    .slogan{
+        font-size: 1.8rem;
+        margin-top: 0.5rem;
+        margin-bottom: 5rem;
+        text-align: center;
+    }
+
+    .banner-container{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .banner-container img{
+        margin-bottom: 1rem;
+        max-height: 22rem;
+    }
+
+    .sections-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .section-container{
+        gap: 0.5rem;
+        padding: 1rem;
+        flex-direction: row;
+        max-width: none;
+        font-size: 2rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .section-container img{
+        max-width: 5rem;
+    }
+
+    .recommended-container{
+        flex-direction: column;
+    }
+    .banner-container-2{
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .recommended-article-container{
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+        padding-left: 0.25rem;
+        padding-right: 0.75rem;
+    }
+
+    footer{
+        flex-direction: column;
+        gap: 1.5rem;
+    }
 }
 
 /* Tablet Styles*/
-@media (min-width: 500px) and (max-width: 1024px){
+@media (min-width: 701px) and (max-width: 1110px){
     .header-title{
         font-size: 2.4rem;
     }
 
     main{
-        margin: 6rem;
-        margin-top: 5rem;
+        margin: 7rem;
+        margin-top: 0;
+        margin-bottom: 0;
     }
 
     .title{
-        font-size: 5rem;
-    }
-
-    .header-title{
-        margin-top: 1.25rem;
-        margin-bottom: 1.25rem;
+        font-size: 5.5rem;
     }
 
     .sections-container{
+        display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+        gap: 1rem;
+        margin-bottom: 1rem;
     }
 
     .section-container{
+        gap: 0.5rem;
+        padding: 2rem;
         flex-direction: row;
-        max-width: 30rem;
-        gap: 2rem;
+        max-width: none;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .banner-container{
+        padding: 1rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .banner-container-2{
+        padding: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        margin-top: 5rem;
+    }
+
+    article{
+        margin-bottom: 3rem;
     }
 
     footer{
@@ -334,6 +571,16 @@ footer{
         margin-left: 30rem;
         margin-right: 30rem;
     }
+
+    .banner-container{
+        padding-left: 30rem;
+        padding-right: 30rem;
+    }
+    
+    .banner-container-2{
+        padding-left: 30rem;
+        padding-right: 30rem;
+    }
 }
 
 /* Mega Desktop Styles*/
@@ -342,12 +589,50 @@ footer{
         margin-left: 40rem;
         margin-right: 40rem;
     }
+
+    .banner-container{
+        padding-left: 40rem;
+        padding-right: 40rem;
+    }
+    
+    .banner-container-2{
+        padding-left: 40rem;
+        padding-right: 40rem;
+    }
 }
 
-/* MEGA Desktop Styles*/
+/* Giga Desktop Styles*/
 @media (min-width: 2100px){
     main{
-        margin-left: 55rem;
-        margin-right: 55rem;
+        margin-left: 70rem;
+        margin-right: 70rem;
+    }
+
+    .banner-container{
+        padding-left: 70rem;
+        padding-right: 70rem;
+    }
+    
+    .banner-container-2{
+        padding-left: 70rem;
+        padding-right: 70rem;
+    }
+}
+
+/* GIGA Desktop Styles*/
+@media (min-width: 2600px){
+    main{
+        margin-left: 120rem;
+        margin-right: 120rem;
+    }
+
+    .banner-container{
+        padding-left: 120rem;
+        padding-right: 120rem;
+    }
+    
+    .banner-container-2{
+        padding-left: 120rem;
+        padding-right: 120rem;
     }
 }

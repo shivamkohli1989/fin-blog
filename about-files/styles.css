@@ -1,0 +1,281 @@
+/* Desktop Styles*/
+:root{
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    color: black;
+    font-size: 62.5%;
+}
+  
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: white;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    box-shadow: 1px 1px 1px rgb(150, 150, 150);
+}
+
+.toggle-button-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+.header-title{
+    margin: 1rem;
+    margin-left: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-title img{
+    max-height: 4.5rem;
+    width: auto;
+    border-radius: 5px;
+}
+
+.navbar-links{
+    display: flex;
+    margin-right: 3rem;
+    background-color: white;
+}
+
+.navbar-links li{
+    list-style: none;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.navbar-links li a{
+    text-decoration: none;
+    color: black;
+    padding: 1.25rem;
+    display: block;
+}
+
+.navbar-links li:hover{
+    background-color: rgb(210, 210, 210);
+    border-radius: 10px;
+}
+
+.header-toggle-button{
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32px;
+    height: 23px;
+    margin-right: 3.5rem;
+}
+
+.header-toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 20rem;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
+.title{
+    font-size: 6rem;
+    margin-bottom: 3rem;
+    align-self: stretch;
+    border-bottom: 1px solid black;
+    padding-bottom: 1rem;
+}
+
+article{
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    align-self: stretch;
+}
+
+.heading{
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+/* Mobile Styles*/
+@media (max-width: 525px){
+    header{
+        background-color: transparent;
+    }
+
+    .header-toggle-button{
+        display: flex;
+        margin-right: 2rem;
+    }
+    
+    .navbar-links{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 6.25rem;
+        position: absolute;
+        margin-right: 0;
+    }
+
+    .navbar-links li{
+        width: 95%;
+        font-size: 1.9rem;
+        margin-left: 1rem;
+    }
+
+    .navbar-links li a{
+        padding: 1.75rem;
+        padding-left: 1rem;
+    }
+
+    .header-title{
+        margin: 1.25rem;
+        margin-left: 1rem;
+    }
+
+    .header-title img{
+        max-width: 20rem;
+    }
+
+    header{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .active{
+        display: flex;
+        padding-bottom: 1vh;
+        box-shadow: 1px 1px 1px rgb(150, 150, 150);
+
+        animation: expand 200ms ease-in-out;
+        transform-origin: top;
+    }
+
+    .active-reverse {
+        display: flex;
+        animation: expand-reverse 200ms ease-in-out;
+        transform-origin: top;
+    }
+
+    @keyframes expand {
+        0% {
+          transform: scaleY(0);
+        }
+        
+        100% {
+          transform: scaleY(1);
+        }
+    }
+
+    @keyframes expand-reverse {
+        0% {
+            transform: scaleY(1);
+        }
+    
+        100% {
+            transform: scaleY(0);
+        }
+    }
+
+    main{
+        margin: 2rem;
+    }
+
+    .title{
+        font-size: 3.25rem
+    }
+
+    .website-info{
+        padding-bottom: 1rem;
+        font-size: 1.3rem;
+    }
+
+    .main-article{
+        margin-bottom: 1rem;
+    }
+}
+
+/* Small Tablet Styles*/
+@media (min-width: 525px) and (max-width: 700px){
+    main{
+        margin: 2rem;
+    }
+
+    .title{
+        font-size: 3.25rem
+    }
+
+    .website-info{
+        padding-bottom: 1rem;
+        font-size: 1.3rem;
+    }
+
+    .main-article{
+        margin-bottom: 1rem;
+    }
+}
+
+/* Tablet Styles*/
+@media (min-width: 701px) and (max-width: 1110px){
+    .header-title{
+        font-size: 2.4rem;
+    }
+
+    main{
+        margin: 8rem;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+
+    .title{
+        font-size: 5rem;
+    }
+
+}
+
+/* Big Desktop Styles*/
+@media (min-width: 1425px){
+    main{
+        margin-left: 30rem;
+        margin-right: 30rem;
+    }
+
+}
+
+/* Mega Desktop Styles*/
+@media (min-width: 1810px){
+    main{
+        margin-left: 40rem;
+        margin-right: 40rem;
+    }
+}
+
+/* Giga Desktop Styles*/
+@media (min-width: 2100px){
+    main{
+        margin-left: 70rem;
+        margin-right: 70rem;
+    }
+}
+
+/*GIGA Desktop Styles*/
+@media (min-width: 2600px){
+    main{
+        margin-left: 120rem;
+        margin-right: 120rem;
+    }
+}
