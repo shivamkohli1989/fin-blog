@@ -92,6 +92,19 @@ main{
     margin-bottom: 2rem;
 }
 
+.top-main{
+    background-image: url('assets/background2.webp');
+    background-size: cover; 
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    background-blend-mode: overlay;
+    margin: 0;
+    margin-top: 0.1rem;
+    padding: 14rem;
+    padding-top: 0;
+    padding-bottom: 2rem;
+}
+
 .title{
     font-size: 7rem;
     margin-top: 10rem;
@@ -134,6 +147,13 @@ main{
     color: black;
     flex: 1;
     border-radius: 5px;
+
+    transition: transform 0.2s ease;
+}
+
+.section-container:hover{
+    background-color: rgb(235, 235, 235);
+    transform: translateY(-10px);
 }
 
 .section-container img{
@@ -141,9 +161,9 @@ main{
 }
 
 .banner-container{
-    background-color: lightgrey;
+    background-color: lightgray;
     font-size: 1.8rem;
-    padding: 1rem;
+    padding: 0.75rem;
     padding-left: 15rem;
     padding-right: 15rem;
     display: grid;
@@ -159,7 +179,13 @@ main{
     max-height: 25rem;
     width: auto;
     justify-self: center;
+    transition: transform 0.3s ease;
 }
+
+.banner-container img:hover{
+    transform: translateY(-10px);
+}
+
 .banner-container div{
     padding-left: 2rem;
 }
@@ -198,6 +224,10 @@ main{
     border-radius: 5px;
 }
 
+.article-container:hover{
+    background-color: rgb(235, 235, 235);
+}
+
 .article-container img{
     max-width: 6rem;
     margin-left: 1rem;
@@ -213,9 +243,9 @@ article{
 }
 
 .banner-container-2{
-    background-color: lightgrey;
+    background-color: lightgray;
     font-size: 1.8rem;
-    padding: 2rem;
+    padding: 2.5rem;
     padding-left: 15rem;
     padding-right: 15rem;
     display: flex;
@@ -237,7 +267,7 @@ article{
 .recommended-article-container{
     text-decoration: none;
     color: black;
-    justify-content: flex-end;
+    justify-content: center;
     margin: 0;
     font-size: 1.8rem;
     border: 1px solid black;
@@ -249,10 +279,20 @@ article{
     text-align: center;
     padding: 1rem;
     padding-bottom: 2.5rem;
+    flex: 1;
+}
+
+.recommended-article-container:hover{
+    background-color: rgb(235, 235, 235);
 }
 
 .recommended-article-container img{
     max-width: 10rem;
+}
+
+a .credit-recommended{
+    max-width: 9rem;
+    padding: 1rem;
 }
 
 footer{
@@ -370,8 +410,12 @@ footer{
         margin: 2rem;
     }
 
+    .top-main{
+        padding: 2rem;
+    }
+
     .title{
-        font-size: 4rem;
+        font-size: 5.65rem;
         margin-top: 2rem;
         text-align: center;
     }
@@ -386,11 +430,14 @@ footer{
     .banner-container{
         display: flex;
         flex-direction: column;
-        padding: 1rem;
+        padding: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 0;
     }
 
     .banner-container img{
-        margin-bottom: 1rem;
+        margin-bottom: 0;
         max-height: 22rem;
     }
 
@@ -411,6 +458,10 @@ footer{
         padding-bottom: 2rem;
     }
 
+    .section-container:hover{
+        transform: none;
+    }
+
     .section-container img{
         max-width: 5rem;
     }
@@ -418,6 +469,7 @@ footer{
     .recommended-container{
         flex-direction: column;
     }
+
     .banner-container-2{
         flex-direction: column;
         padding: 2rem;
@@ -429,11 +481,13 @@ footer{
         margin: 0;
         padding-left: 0.25rem;
         padding-right: 0.75rem;
+        justify-content: flex-start;
     }
 
     footer{
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 2.5rem;
+        align-items: flex-start;
     }
 }
 
@@ -443,8 +497,12 @@ footer{
         margin: 2rem;
     }
 
+    .top-main{
+        padding: 2rem;
+    }
+
     .title{
-        font-size: 4rem;
+        font-size: 7.8rem;
         margin-top: 2rem;
         text-align: center;
     }
@@ -459,11 +517,14 @@ footer{
     .banner-container{
         display: flex;
         flex-direction: column;
-        padding: 1rem;
+        padding: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 0;
     }
 
     .banner-container img{
-        margin-bottom: 1rem;
+        margin-bottom: 0;
         max-height: 22rem;
     }
 
@@ -484,6 +545,10 @@ footer{
         padding-bottom: 3rem;
     }
 
+    .section-container:hover{
+        transform: none;
+    }
+
     .section-container img{
         max-width: 5rem;
     }
@@ -501,17 +566,19 @@ footer{
         padding: 0;
         margin: 0;
         padding-left: 0.25rem;
-        padding-right: 0.75rem;
+        padding-right: 1.5rem;
+        justify-content: flex-start;
     }
 
     footer{
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 2.5rem;
+        align-items: flex-start;
     }
 }
 
 /* Tablet Styles*/
-@media (min-width: 701px) and (max-width: 1110px){
+@media (min-width: 701px) and (max-width: 1125px){
     .header-title{
         font-size: 2.4rem;
     }
@@ -522,8 +589,14 @@ footer{
         margin-bottom: 0;
     }
 
+    .top-main{
+        padding-left: 7rem;
+        padding-right: 7rem;
+        padding-bottom: 5rem;
+    }
+
     .title{
-        font-size: 5.5rem;
+        font-size: 6.25rem;
     }
 
     .sections-container{
@@ -544,16 +617,16 @@ footer{
     }
 
     .banner-container{
-        padding: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
         margin-top: 3rem;
         margin-bottom: 3rem;
     }
 
     .banner-container-2{
-        padding: 1rem;
+        padding: 2rem;
         padding-left: 2rem;
         padding-right: 2rem;
-        margin-top: 5rem;
     }
 
     article{
@@ -565,74 +638,449 @@ footer{
     }
 }
 
-/* Big Desktop Styles*/
-@media (min-width: 1425px){
+/*Desktop Styles*/
+@media (min-width: 1300px){
     main{
-        margin-left: 30rem;
-        margin-right: 30rem;
+        margin-left: 22rem;
+        margin-right: 22rem;
+    }
+
+    .top-main{
+        padding-left: 22rem;
+        padding-right: 22rem;
     }
 
     .banner-container{
-        padding-left: 30rem;
-        padding-right: 30rem;
+        padding-left: 22rem;
+        padding-right: 22rem;
+    }
+    
+    .banner-container-2{
+        padding-left: 22rem;
+        padding-right: 22rem;
+    }
+}
+
+/* Big Desktop Styles*/
+@media (min-width: 1425px){
+    main{
+        margin-left: 28rem;
+        margin-right: 28rem;
+    }
+
+    .top-main{
+        padding-left: 28rem;
+        padding-right: 28rem;
+    }
+
+    .banner-container{
+        padding-left: 28rem;
+        padding-right: 28rem;
     }
     
     .banner-container-2{
         padding-left: 30rem;
         padding-right: 30rem;
+    }
+}
+
+@media (min-width: 1500px){
+    main{
+        margin-left: 32rem;
+        margin-right: 32rem;
+    }
+
+    .top-main{
+        padding-left: 32rem;
+        padding-right: 32rem;
+    }
+
+    .banner-container{
+        padding-left: 32rem;
+        padding-right: 32rem;
+    }
+    
+    .banner-container-2{
+        padding-left: 32rem;
+        padding-right: 32rem;
+    }
+}
+
+@media (min-width: 1600px){
+    main{
+        margin-left: 35rem;
+        margin-right: 35rem;
+    }
+
+    .top-main{
+        padding-left: 35rem;
+        padding-right: 35rem;
+    }
+
+    .banner-container{
+        padding-left: 35rem;
+        padding-right: 35rem;
+    }
+    
+    .banner-container-2{
+        padding-left: 35rem;
+        padding-right: 35rem;
     }
 }
 
 /* Mega Desktop Styles*/
-@media (min-width: 1810px){
+@media (min-width: 1700px){
     main{
-        margin-left: 40rem;
-        margin-right: 40rem;
+        margin-left: 38rem;
+        margin-right: 38rem;
+    }
+
+    .top-main{
+        padding-left: 38rem;
+        padding-right: 38rem;
     }
 
     .banner-container{
-        padding-left: 40rem;
-        padding-right: 40rem;
+        padding-left: 38rem;
+        padding-right: 38rem;
     }
     
     .banner-container-2{
-        padding-left: 40rem;
-        padding-right: 40rem;
+        padding-left: 38rem;
+        padding-right: 38rem;
+    }
+}
+
+@media (min-width: 1800px){
+    main{
+        margin-left: 42rem;
+        margin-right: 42rem;
+    }
+
+    .top-main{
+        padding-left: 42rem;
+        padding-right: 42rem;
+    }
+
+    .banner-container{
+        padding-left: 42rem;
+        padding-right: 42rem;
+    }
+    
+    .banner-container-2{
+        padding-left: 42rem;
+        padding-right: 42rem;
     }
 }
 
 /* Giga Desktop Styles*/
-@media (min-width: 2100px){
+@media (min-width: 1900px){
     main{
-        margin-left: 70rem;
-        margin-right: 70rem;
+        margin-left: 45rem;
+        margin-right: 45rem;
+    }
+
+    .top-main{
+        padding-left: 45rem;
+        padding-right: 45rem;
     }
 
     .banner-container{
-        padding-left: 70rem;
-        padding-right: 70rem;
+        padding-left: 45rem;
+        padding-right: 45rem;
     }
     
     .banner-container-2{
-        padding-left: 70rem;
-        padding-right: 70rem;
+        padding-left: 45rem;
+        padding-right: 45rem;
+    }
+}
+
+@media (min-width: 2050px){
+    main{
+        margin-left: 50rem;
+        margin-right: 50rem;
+    }
+
+    .top-main{
+        padding-left: 50rem;
+        padding-right: 50rem;
+    }
+
+    .banner-container{
+        padding-left: 50rem;
+        padding-right: 50rem;
+    }
+    
+    .banner-container-2{
+        padding-left: 50rem;
+        padding-right: 50rem;
+    }
+}
+
+@media (min-width: 2200px){
+    main{
+        margin-left: 55rem;
+        margin-right: 55rem;
+    }
+
+    .top-main{
+        padding-left: 55rem;
+        padding-right: 55rem;
+    }
+
+    .banner-container{
+        padding-left: 55rem;
+        padding-right: 55rem;
+    }
+    
+    .banner-container-2{
+        padding-left: 55rem;
+        padding-right: 55rem;
+    }
+}
+
+@media (min-width: 2350px){
+    main{
+        margin-left: 60rem;
+        margin-right: 60rem;
+    }
+
+    .top-main{
+        padding-left: 60rem;
+        padding-right: 60rem;
+    }
+
+    .banner-container{
+        padding-left: 60rem;
+        padding-right: 60rem;
+    }
+    
+    .banner-container-2{
+        padding-left: 60rem;
+        padding-right: 60rem;
     }
 }
 
 /* GIGA Desktop Styles*/
-@media (min-width: 2600px){
+@media (min-width: 2500px){
     main{
-        margin-left: 120rem;
-        margin-right: 120rem;
+        margin-left: 75rem;
+        margin-right: 75rem;
+    }
+
+    .top-main{
+        padding-left: 75rem;
+        padding-right: 75rem;
     }
 
     .banner-container{
-        padding-left: 120rem;
-        padding-right: 120rem;
+        padding-left: 75rem;
+        padding-right: 75rem;
     }
     
     .banner-container-2{
-        padding-left: 120rem;
-        padding-right: 120rem;
+        padding-left: 75rem;
+        padding-right: 75rem;
+    }
+}
+
+/* Mega Giga Desktop Styles*/
+@media (min-width: 2700px){
+    main{
+        margin-left: 85rem;
+        margin-right: 85rem;
+    }
+
+    .top-main{
+        padding-left: 85rem;
+        padding-right: 85rem;
+    }
+
+    .banner-container{
+        padding-left: 85rem;
+        padding-right: 85rem;
+    }
+    
+    .banner-container-2{
+        padding-left: 85rem;
+        padding-right: 85rem;
+    }
+}
+
+@media (min-width: 2900px){
+    main{
+        margin-left: 95rem;
+        margin-right: 95rem;
+    }
+
+    .top-main{
+        padding-left: 95rem;
+        padding-right: 95rem;
+    }
+
+    .banner-container{
+        padding-left: 95rem;
+        padding-right: 95rem;
+    }
+    
+    .banner-container-2{
+        padding-left: 95rem;
+        padding-right: 95rem;
+    }
+}
+
+@media (min-width: 3100px){
+    main{
+        margin-left: 105rem;
+        margin-right: 105rem;
+    }
+
+    .top-main{
+        padding-left: 105rem;
+        padding-right: 105rem;
+    }
+
+    .banner-container{
+        padding-left: 105rem;
+        padding-right: 105rem;
+    }
+    
+    .banner-container-2{
+        padding-left: 105rem;
+        padding-right: 105rem;
+    }
+}
+
+@media (min-width: 3300px){
+    main{
+        margin-left: 115rem;
+        margin-right: 115rem;
+    }
+
+    .top-main{
+        padding-left: 115rem;
+        padding-right: 115rem;
+    }
+
+    .banner-container{
+        padding-left: 115rem;
+        padding-right: 115rem;
+    }
+    
+    .banner-container-2{
+        padding-left: 115rem;
+        padding-right: 115rem;
+    }
+}
+
+@media (min-width: 3500px){
+    main{
+        margin-left: 125rem;
+        margin-right: 125rem;
+    }
+
+    .top-main{
+        padding-left: 125rem;
+        padding-right: 125rem;
+    }
+
+    .banner-container{
+        padding-left: 125rem;
+        padding-right: 125rem;
+    }
+    
+    .banner-container-2{
+        padding-left: 125rem;
+        padding-right: 125rem;
+    }
+}
+
+@media (min-width: 3700px){
+    main{
+        margin-left: 140rem;
+        margin-right: 140rem;
+    }
+
+    .top-main{
+        padding-left: 140rem;
+        padding-right: 140rem;
+    }
+
+    .banner-container{
+        padding-left: 140rem;
+        padding-right: 140rem;
+    }
+    
+    .banner-container-2{
+        padding-left: 140rem;
+        padding-right: 140rem;
+    }
+}
+
+/* MEGA GIGA Desktop Styles*/
+@media (min-width: 3900px){
+    main{
+        margin-left: 148rem;
+        margin-right: 148rem;
+    }
+
+    .top-main{
+        padding-left: 148rem;
+        padding-right: 148rem;
+    }
+
+    .banner-container{
+        padding-left: 148rem;
+        padding-right: 148rem;
+    }
+    
+    .banner-container-2{
+        padding-left: 148rem;
+        padding-right: 148rem;
+    }
+}
+
+@media (min-width: 4100px){
+    main{
+        margin-left: 158rem;
+        margin-right: 158rem;
+    }
+
+    .top-main{
+        padding-left: 158rem;
+        padding-right: 158rem;
+    }
+
+    .banner-container{
+        padding-left: 158rem;
+        padding-right: 158rem;
+    }
+    
+    .banner-container-2{
+        padding-left: 158rem;
+        padding-right: 158rem;
+    }
+}
+
+@media (min-width: 4300px){
+    main{
+        margin-left: 210rem;
+        margin-right: 210rem;
+    }
+
+    .top-main{
+        padding-left: 210rem;
+        padding-right: 210rem;
+    }
+
+    .banner-container{
+        padding-left: 210rem;
+        padding-right: 210rem;
+    }
+    
+    .banner-container-2{
+        padding-left: 210rem;
+        padding-right: 210rem;
     }
 }

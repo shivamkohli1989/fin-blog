@@ -111,6 +111,27 @@ article{
     font-size: 3rem;
 }
 
+form input{
+    width: 100%;
+    border: 1px solid black;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+form textarea{
+    width: 100%;
+    border: 1px solid black;
+}
+
+.submit-buttom{
+    margin-top: 1rem;
+}
+
+.submit-buttom:hover{
+    cursor: pointer;
+    width: 100%;
+}
+
 /* Mobile Styles*/
 @media (max-width: 525px){
     header{

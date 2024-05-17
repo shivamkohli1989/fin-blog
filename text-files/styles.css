@@ -124,6 +124,11 @@ article{
     margin-top: 1rem;
 }
 
+.bullet-link{
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+}
+
 .item-container{
     background-color: white;
     border-radius: 5px;
@@ -154,8 +159,8 @@ article{
 }
 
 .item-name{
-    font-size: 2.9rem;
-    margin-bottom: 1rem;
+    font-size: 3.25rem;
+    align-self: stretch;
 }
 
 .item-name-container img{
@@ -170,13 +175,12 @@ article{
 
 .item-name-container button{
     margin-top: 0rem;
-    padding: 0.85rem;
+    padding: 1rem;
     background-color: lightgreen;
     color: black;
     border: none;
     border-radius: 5px;
     width: 100%;
-    font-size: 1.6rem;
 }
 
 .item-name-container button:hover{
@@ -373,8 +377,7 @@ footer{
     }
 
     .item-name{
-        font-size: 3.5rem;
-        margin-bottom: 3rem;
+        font-size: 2.5rem;
     }
 
     .pros-cons-container{
@@ -416,8 +419,6 @@ footer{
 
     .item-name-container button{
         margin-top: 1.5rem;
-        font-size: 1.6rem;
-        padding: 0.9rem;
     }
 
     .main-article{
@@ -467,8 +468,7 @@ footer{
     }
 
     .item-name{
-        font-size: 4rem;
-        margin-bottom: 3rem;
+        font-size: 2.75rem;
     }
 
     .pros{
@@ -509,8 +509,6 @@ footer{
 
     .item-name-container button{
         margin-top: 1.5rem;
-        font-size: 1.6rem;
-        padding: 0.9rem;
     }
 
     .main-article{

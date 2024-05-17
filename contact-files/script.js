@@ -33,3 +33,28 @@ const main = (() =>{
         })
     }
 })();
+
+function sendMail(){
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+
+    if (!name || !email || !message) {
+        alert("Please fill out all required fields.");
+        return;
+    }
+
+    let params = {
+        from_name : document.getElementById("name").value,
+        email_id : document.getElementById("email").value,
+        message : document.getElementById("message").value
+    }
+
+    emailjs.send("service_n6gyfhd", "template_nhz4fm5", params)
+    .then(function(res) {
+        alert("Message Sent");
+        document.getElementById("contactForm").reset();
+    }, function(error){
+        alert("Failed to Send Message: " + error);
+    })
+}

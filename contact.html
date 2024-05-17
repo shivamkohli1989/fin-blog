@@ -10,8 +10,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="about-files/styles.css">
-  <script src="about-files/script.js" defer></script>
+  <link rel="stylesheet" href="contact-files/styles.css">
+  <script src="contact-files/script.js" defer></script>
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function(){
+        emailjs.init({
+          publicKey: "2PXVzvgD4XWTo1Qov",
+        });
+    })();
+  </script>
 
   <link rel="icon" type="image/png" href="about-files/assets/icon.png">
 </head>
@@ -20,7 +30,7 @@
   <header>
 
     <div class="toggle-button-container">
-      <a href="index.html" class="header-title"><img src="about-files/assets/logo.png" alt="logo"></a>
+      <a href="https://thefinancialposts.com" class="header-title"><img src="about-files/assets/logo.png" alt="logo"></a>
 
       <a href="#" class="header-toggle-button">
       <span class="bar"></span>
@@ -30,8 +40,8 @@
     </div>
 
       <ul class="navbar-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#articles">Articles</a></li>
+        <li><a href="https://thefinancialposts.com">Home</a></li>
+        <li><a href="https://thefinancialposts.com#articles">Articles</a></li>
         <li><a href="about.html">About</a></li>
       </ul>
 
@@ -42,15 +52,31 @@
 
     <article class="main-article">
       <div>
-        To get in contact please use the email address below and we'll respond as quickly as possible. Please 
+        To get in contact please fill out the form below and we'll respond as quickly as possible. Please 
         enter your name and email address so we can get back to you. 
       </div>
       <br>
 
-      <p class="heading">Email</p>
-      <div>
-        thefinancialposts@gmail.com
-      </div>
+      <p class="heading">Form</p>
+      <p>Required fields are indicated with "*"</p>
+      <br>
+      <form action="" id="contactForm">
+        <label for="name">Name*</label>
+        <br>
+        <input type="text" id="name" name="name" required>
+
+        <br>
+        <label for="email">Email Address*</label>
+        <br>
+        <input type="email" id="email" name="email" required>
+
+        <br>
+        <label for="message">Message*</label>
+        <br>
+        <textarea id="message" name="message" rows="10" required></textarea>
+
+        <input type="submit" value="Send Message" class="submit-buttom" onclick="sendMail(); return false;">
+      </form>
       
     </article>
 

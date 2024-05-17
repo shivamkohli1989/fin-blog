@@ -170,13 +170,12 @@ article{
 
 .item-name-container button{
     margin-top: 0rem;
-    padding: 0.85rem;
+    padding: 1rem;
     background-color: lightgreen;
     color: black;
     border: none;
     border-radius: 5px;
     width: 100%;
-    font-size: 1.6rem;
 }
 
 .item-name-container button:hover{
@@ -201,7 +200,7 @@ article{
 .pros-cons-container{
     display: flex;
     margin-right: 3rem;
-    gap: 3rem;
+    justify-content: space-between;
 }
 
 .pros{
@@ -217,6 +216,7 @@ article{
     padding-left: 3rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    padding-right: 1rem;
 }
 
 .approx-space{
@@ -416,8 +416,6 @@ footer{
 
     .item-name-container button{
         margin-top: 1.5rem;
-        font-size: 1.6rem;
-        padding: 0.9rem;
     }
 
     .main-article{
@@ -509,8 +507,6 @@ footer{
 
     .item-name-container button{
         margin-top: 1.5rem;
-        font-size: 1.6rem;
-        padding: 0.9rem;
     }
 
     .main-article{
@@ -574,11 +570,11 @@ footer{
     }
 
     .item-name-container img{
-        width: 66%;
+        width: 67%;
     }
 
     .item-name-container form{
-        width: 66%;
+        width: 67%;
     }
 }
 
@@ -606,11 +602,11 @@ footer{
     }
 
     .item-name-container img{
-        width: 63%;
+        width: 65%;
     }
 
     .item-name-container form{
-        width: 63%;
+        width: 65%;
     }
 }
 
