@@ -332,6 +332,11 @@ footer{
         background-color: transparent;
     }
 
+    .header-title img{
+        max-height: 4.25rem;
+        padding: .125rem;
+    }
+
     .header-toggle-button{
         display: flex;
         margin-right: 2rem;
@@ -358,12 +363,7 @@ footer{
     }
 
     .header-title{
-        margin: 1.25rem;
         margin-left: 1rem;
-    }
-
-    .header-title img{
-        max-width: 20rem;
     }
 
     header{
